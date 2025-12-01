@@ -2,7 +2,7 @@ import { Button, ButtonProps, TextInput, View } from "react-native";
 
 export function BotaoCustomizado({ ...rest }: ButtonProps) {
   return (
-    <View className="  w-full">
+    <View className="   w-full">
 
       <Button
         {...rest}
