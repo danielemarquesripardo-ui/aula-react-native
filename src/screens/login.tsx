@@ -8,8 +8,9 @@ export function LoginScreen() {
 
   const [senha, setSenha] = useState('');
 
-  console.log(senha);
-  console.log(login);
+  function logar() {
+    console.log('login', login, 'senha', senha);
+  }
   return (
     <View className="flex-1 items-center justify-center">
       <View className="w-full items-center gap-5 p-5">
@@ -29,10 +30,19 @@ export function LoginScreen() {
           }}
         />
 
-        <BotaoCustomizado title="Entrar"
-         onPress={() => console.log("login", login, "senha", senha)} />
-        <Text className="text-blue-400">Esqueceu a Senha?</Text>
+        <BotaoCustomizado title="Entrar" onPress={logar} />
+
+        <Text className="text-blue-400">
+          Esqueceu a Senha?
+        </Text>
+        <View className='flex-row gap-4'>
+          <Text className="text-blue-400 text-xl">Cadastrar-se</Text>
+          <Text className="text-xl">|</Text> 
+          <Text className="text-blue-400">Esqueceu a Senha?</Text>
+        </View>
       </View>
     </View>
   );
 }
+
+   
