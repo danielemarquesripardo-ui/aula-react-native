@@ -1,20 +1,21 @@
 import { BotaoCustomizado } from '@/components/botaoCustumizado';
 import { InputCustomizado } from '@/components/inputCustomizado';
+import { ProfileScreenNavigationProp } from '@/interface/rootPages';
 import { useNavigation } from '@react-navigation/native';
 import { useState } from 'react';
 import { Text, View } from 'react-native';
 
 export function LoginScreen() {
   const [login, setLogin] = useState('');
-
   const [senha, setSenha] = useState('');
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<ProfileScreenNavigationProp>();
 
   function logar() {
     console.log('login', login, 'senha', senha);
-    navigation.navigate("soma")
+    navigation.navigate("soma");
   }
+  
   return (
     <View className="flex-1 items-center justify-center">
       <View className="w-full items-center gap-5 p-5">
